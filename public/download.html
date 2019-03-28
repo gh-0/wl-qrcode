@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.ff.png" type="image/x-icon">
+  <script src="https://jic.talkingdata.com/app/h5/v1?appid=69EAA7854C7D4E02954210DA6113BD68&vc=1.0"></script>
+</head>
+<body>
+  <script>
+    window.onload = function(){
+      const search = new URLSearchParams(window.location.search);
+      const tag = search.get("tag");
+      const td_channelid = search.get("td_channelid")
+      window.TDAPP.onEvent(`${td_channelid}:${tag}`);
+      window.location.href ="http://a.app.qq.com/o/simple.jsp?pkgname=com.wenliao.keji";
+    }
+  </script>
+</body>
+</html>

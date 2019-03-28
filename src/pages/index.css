@@ -1,23 +1,53 @@
+.wrap {
+  background: #ffffff;
+  padding-top: 18vh;
+  height: 100%;
+  position: relative;
+}
 
-.normal {
-  font-family: Georgia, sans-serif;
-  margin-top: 4em;
+.infoWrap {
   text-align: center;
 }
 
-.welcome {
-  height: 328px;
-  background: url(../assets/yay.jpg) no-repeat center 0;
-  background-size: 388px 328px;
+.logo {
+  width: 2rem;
 }
 
-.list {
-  font-size: 1.2em;
-  margin-top: 1.8em;
-  list-style: none;
-  line-height: 1.5em;
+.slogan {
+  text-align: center;
+  font-size: 0.4rem;
 }
 
-.list code {
-  background: #f7f7f7;
+.downloadWrap {
+  position: absolute;
+  width: 100%;
+  bottom: 16vh;
+}
+
+.download {
+  text-decoration: none;
+  display: block;
+  font-size: 0.4rem;
+  color: #ffffff;
+  background: #ff4050;
+  border-radius: 45px;
+  width: 80%;
+  padding: 0.3rem;
+  margin: 0 auto;
+  margin-bottom: 0.7rem;
+  text-align: center;
+}
+
+.copyright {
+  margin-left: 50%;
+  position: absolute;
+  bottom: 8px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+
+.copyright p {
+  text-align: center;
+  font-size: 0.3rem;
+  color: #8a8a8f;
 }
