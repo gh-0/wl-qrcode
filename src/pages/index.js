@@ -2,14 +2,15 @@ import { getTypes } from '../utils/ua';
 import logoImg from '../assets/logo.png';
 import styles from './index.css';
 
-export default function() {
+export default function () {
   const search = new URLSearchParams(window.location.search);
   const tag = search.get('tag');
   const types = getTypes();
   const downloadUrl =
     types.indexOf('ios') !== -1
-      ? `download.html?tag=${tag || 'default'}&td_channelid=ios`
-      : `download.html?tag=${tag || 'default'}&td_channelid=android`;
+      ? `download.html?td_channelid=ios&tag=${tag || 'default'}`
+      : `/wechat-open-browser?td_channelid=android&tag=${tag || 'default'}`;
+  // : `download.html?tag=${tag || 'default'}&td_channelid=android`;
   window.TDAPP.onEvent(tag ? tag : 'default', 'tag');
   return (
     <div className={styles.wrap}>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,15 +8,26 @@
   <link rel="shortcut icon" href="favicon.ff.png" type="image/x-icon">
   <script src="https://jic.talkingdata.com/app/h5/v1?appid=69EAA7854C7D4E02954210DA6113BD68&vc=1.0"></script>
 </head>
+
 <body>
   <script>
-    window.onload = function(){
-      const search = new URLSearchParams(window.location.search);
-      const tag = search.get("tag");
-      const td_channelid = search.get("td_channelid")
-      window.TDAPP.onEvent(`${td_channelid}:${tag}`);
-      window.location.href ="http://a.app.qq.com/o/simple.jsp?pkgname=com.wenliao.keji";
+    window.onload = function () {
+      var search = new URLSearchParams(window.location.search);
+      var tag = search.get("tag");
+      var td_channelid = search.get("td_channelid")
+      window.TDAPP.onEvent(td_channelid + "_" + tag);
+      if (td_channelid === "ios") {
+        window.location.href = "https://itunes.apple.com/cn/app/%E9%97%AE%E8%81%8A-%E8%AE%A9%E7%A4%BE%E4%BA%A4%E5%9B%9E%E5%BD%92%E7%94%9F%E6%B4%BB/id1156785581?ls=1&mt=8";
+      } else if (td_channelid === "android") {
+        window.location.href = "market://details?id=com.wenliao.keji";
+        setTimeout(() => {
+          window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wenliao.keji";
+        }, 1000 * 3);
+      } else {
+        window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.wenliao.keji";
+      }
     }
   </script>
 </body>
+
 </html>
