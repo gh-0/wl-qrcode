@@ -16,7 +16,7 @@ export default function () {
     <div className={styles.wrap}>
       <section className={styles.infoWrap}>
         <img className={styles.logo} src={logoImg} />
-        <p className={styles.slogan}>问聊-让生活有温度</p>
+        <p className={styles.slogan}>问聊-在你身边，有问必答</p>
       </section>
       <section className={styles.downloadWrap}>
         <a href={downloadUrl} className={styles.download}>
